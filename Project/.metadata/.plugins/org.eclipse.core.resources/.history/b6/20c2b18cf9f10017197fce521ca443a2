@@ -1,0 +1,14 @@
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library implements Serializable{
+	
+	private List<Book> books;
+	
+	public Library(){
+		List<Book> books = new ArrayList<Book>();
+	}
+
+	
+}

@@ -21,7 +21,24 @@ public class MainSystem {
 			switch (answer) {
 			case 0:
 				System.out.println("Enter file name to load");
-				loadLibrary(in.next());
+				fileName = in.next();
+				FileInputStream fis = null;
+				ObjectInputStream ino = null;
+				File file = new File(fileName+".ser");
+				if (file.exists()) {
+					try {
+						fis = new FileInputStream(file);
+						ino = new ObjectInputStream(fis);
+						lib = (Library)ino.readObject();
+						fis.close();
+						in.close();
+					} catch (FileNotFoundException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				} else{
+					System.out.println("\nThe file doesn't exist");
+				}
 				break;
 			case 1:
 				break;
@@ -34,35 +51,6 @@ public class MainSystem {
 
 		}
 
-	}
-
-	private static void loadLibrary(String name) {
-		FileInputStream fis = null;
-		ObjectInputStream ino = null;
-		File file = new File(name+".ser");
-		if (file.exists()) {
-			try {
-				fis = new FileInputStream(file);
-				ino = new ObjectInputStream(fis);
-				try {
-					lib = (Library)ino.readObject();
-				} catch (ClassNotFoundException | IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				fis.close();
-				in.close();
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-		} else{
-			System.out.println("\nThe file doesn't exist");
-		}
-		
 	}
 
 }

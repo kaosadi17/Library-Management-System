@@ -36,10 +36,10 @@ public class MainSystem {
 
 	}
 
-	private static void loadLibrary(String name) {
+	private static void loadLibrary(String fileName) {
 		FileInputStream fis = null;
 		ObjectInputStream ino = null;
-		File file = new File(name+".ser");
+		File file = new File(fileName+".ser");
 		if (file.exists()) {
 			try {
 				fis = new FileInputStream(file);

@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class MainSystem {
+	
+	static String fileName = null;
+	static Library lib = new Library();
+	static Scanner in = new Scanner(System.in);
+	static Boolean running = true;
+	
+	public static void main(String args[]){
+		
+	}
+
+}

@@ -28,7 +28,6 @@ public class MainSystem {
 				saveAndQuit();
 				break;
 			case 2:
-				System.out.println(lib.toString());
 				break;
 			case 3:
 				break;
@@ -36,7 +35,6 @@ public class MainSystem {
 			}
 
 		}
-		System.exit(0);
 
 	}
 
@@ -47,19 +45,6 @@ public class MainSystem {
 		running = false;
 		FileOutputStream fos = null;
 		ObjectOutputStream out = null;
-		try {
-			fos = new FileOutputStream(fileName);
-			out = new ObjectOutputStream(fos);
-			out.writeObject(lib);
-			fos.close();
-			out.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	private static void loadLibrary(String name) {

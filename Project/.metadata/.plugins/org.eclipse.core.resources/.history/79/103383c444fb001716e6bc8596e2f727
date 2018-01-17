@@ -28,7 +28,6 @@ public class MainSystem {
 				saveAndQuit();
 				break;
 			case 2:
-				System.out.println(lib.toString());
 				break;
 			case 3:
 				break;

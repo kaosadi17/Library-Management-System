@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 public class MainSystem {
@@ -28,7 +27,6 @@ public class MainSystem {
 				saveAndQuit();
 				break;
 			case 2:
-				System.out.println(lib.toString());
 				break;
 			case 3:
 				break;
@@ -36,7 +34,6 @@ public class MainSystem {
 			}
 
 		}
-		System.exit(0);
 
 	}
 
@@ -44,22 +41,7 @@ public class MainSystem {
 		// TODO Auto-generated method stub
 		System.out.println("Enter the file name :");
 		fileName = in.next();
-		running = false;
-		FileOutputStream fos = null;
-		ObjectOutputStream out = null;
-		try {
-			fos = new FileOutputStream(fileName);
-			out = new ObjectOutputStream(fos);
-			out.writeObject(lib);
-			fos.close();
-			out.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 
 	private static void loadLibrary(String name) {

@@ -28,7 +28,6 @@ public class MainSystem {
 				saveAndQuit();
 				break;
 			case 2:
-				System.out.println(lib.toString());
 				break;
 			case 3:
 				break;
@@ -36,7 +35,6 @@ public class MainSystem {
 			}
 
 		}
-		System.exit(0);
 
 	}
 
@@ -50,9 +48,6 @@ public class MainSystem {
 		try {
 			fos = new FileOutputStream(fileName);
 			out = new ObjectOutputStream(fos);
-			out.writeObject(lib);
-			fos.close();
-			out.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -31,7 +31,6 @@ public class MainSystem {
 				System.out.println(lib.toString());
 				break;
 			case 3:
-				addBook();
 				break;
 
 			}
@@ -39,30 +38,6 @@ public class MainSystem {
 		}
 		System.exit(0);
 
-	}
-
-	private static void addBook() {
-		// TODO Auto-generated method stub
-		int isbn;
-		String title,author;
-		double price;
-		
-		System.out.println("\nEnter isbn: ");
-		isbn = in.nextInt();
-		
-		System.out.println("\nEnter title: ");
-		title = in.next();
-		
-		System.out.println("\nEnter author: ");
-		author = in.next();
-		
-		System.out.println("\nEnter price: ");
-		price = in.nextDouble();
-		
-		Book b = new Book(isbn,title,author,price);
-		lib.addBook(b);
-		
-		
 	}
 
 	private static void saveAndQuit() {

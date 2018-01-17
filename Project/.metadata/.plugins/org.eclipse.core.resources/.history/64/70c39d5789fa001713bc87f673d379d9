@@ -1,0 +1,14 @@
+
+public class Test {
+	
+	public static void main(String args[]){
+		
+		String meal = "1335|1335|1335";
+
+		String replaced = meal.replaceAll("|",",");
+		
+		System.out.println(replaced);
+		
+	}
+
+}

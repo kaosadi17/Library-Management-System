@@ -1,7 +1,6 @@
 INDEX VERSION 1.130+/home/amalio/MyGitHubProjects/librarysys/Library-Management-System/Project/.metadata/.plugins/org.eclipse.jdt.core
 3885805113.index
 46282419.index
-2168296080.index
 2233963263.index
 2630498905.index
 1913109094.index

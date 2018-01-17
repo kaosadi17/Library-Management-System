@@ -1,0 +1,14 @@
+
+public class Test {
+	
+	public static void main(String args[]){
+		
+		String meal = "Hambbburger";
+
+		String replaced = meal.replaceAll("b","");
+		
+		System.out.println(replaced);
+		
+	}
+
+}
